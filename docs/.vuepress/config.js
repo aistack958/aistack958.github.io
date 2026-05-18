@@ -102,7 +102,6 @@ export default defineUserConfig({
         link: '/interview-experience/',
         children: [
           { text: '模块概览', link: '/interview-experience/' },
-          { text: '题型与考点分析', link: '/interview-experience/question-types' },
           { text: '技术面试实战', link: '/interview-experience/technical-interview' },
           { text: 'Agent 面试题解析', link: '/interview-experience/agent-questions' },
           { text: '项目经验包装', link: '/interview-experience/project-presentation' },
