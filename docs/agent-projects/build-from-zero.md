@@ -1,4 +1,11 @@
+---
+title: 从0到1构建完整Agent应用
+description: 走完从需求定义到架构设计、开发实现、部署上线、持续迭代的Agent应用完整实战流程。
+---
+
 # 从0到1构建完整Agent应用
+
+![Agent 应用开发全流程图](./images/build-from-zero.png)
 
 学习Agent技术最大的障碍不是缺少概念解释，而是缺少完整项目的实战经验。你知道ReAct框架的原理，了解工具调用的机制，看过RAG的架构图——但当面对一个真实业务需求时，怎么把这些碎片知识组装成一个可运行、可交付、可持续迭代的产品？本文将带你走完从需求到迭代的完整流程，不是理论概述，而是每个阶段的实战决策和方法。
 
@@ -126,3 +133,24 @@ Agent应用的长远进化方向：
 - **自学习机制**：从历史成功案例中自动学习和优化——提取高频问题的最优回答模式、更新工具调用的成功率统计、调整检索策略的权重参数。
 
 从0到1构建Agent应用是一个系统工程——需求定义、架构选择、工程实现、部署运维、持续迭代，每个环节都需要实战决策而非理论套用。记住：做出一个能跑的Agent不难，做出一个可靠的、有用的、持续进化的Agent产品才难。而这个"才难"的部分，只能通过实战来学习。
+---
+
+## 本章小结
+
+Agent 应用开发五阶段：
+1. **需求定义**：从业务痛点出发，划定能力边界，定义成功指标
+2. **架构设计**：单/多 Agent、记忆系统、工具集——适合场景的才是最好的
+3. **开发实现**：Prompt 分层、测试策略（Golden + 对抗 + 回归）、可观测性
+4. **部署上线**：延迟优化、成本控制、弹性伸缩、安全权限
+5. **持续迭代**：数据驱动、Prompt 优化循环、系统进化
+
+**核心原则**：做出能跑的 Agent 不难，做出可靠的、有用的、持续进化的 Agent 产品才难。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [The Full-Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/) —— LLM 应用开发完整课程
+> 2. [Building LLM Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) —— 机器学习系统设计
+> 3. [AI Engineer Summit](https://www.youtube.com/@aiDotEngineer) —— AI 工程师社区视频
+> 4. [Patterns for Building LLM-based Systems](https://eugeneyan.com/writing/llm-patterns/) —— LLM 系统设计模式

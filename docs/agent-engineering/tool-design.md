@@ -139,3 +139,24 @@ sandbox_config = {
 1. **工具名要自解释**：`calculate_mortgage` 比 `calc` 好 10 倍。
 2. **描述中明确分工**：`query_current_stock` 描述"查询实时库存"，`query_stock_history` 描述"查询历史库存变化趋势"——让模型能精确选择。
 3. **合并过于碎片化的工具**：3 个参数几乎相同、功能只是返回字段略有差异的工具，合并为 1 个带 `include_fields` 参数的工具更高效。
+---
+
+## 本章小结
+
+| 设计维度 | 最佳实践 |
+|---------|---------|
+| **API 标准化** | JSON Schema 定义参数，名称语义清晰，描述包含边界条件 |
+| **沙箱隔离** | Docker 容器化运行，网络隔离，资源限制 |
+| **错误处理** | 四层错误体系：参数错误 → 执行错误 → 超时错误 → 系统错误 |
+| **安全性** | 最小权限原则，操作审计，输入校验，敏感数据脱敏 |
+
+**核心原则**：工具是 Agent 的"手脚"——设计不好，Agent 再聪明也走不稳。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [JSON Schema](https://json-schema.org/) —— 工具参数定义标准
+> 2. [OpenAPI Specification](https://swagger.io/specification/) —— REST API 设计规范
+> 3. [gVisor Documentation](https://gvisor.dev/docs/) —— 容器安全沙箱
+> 4. [OWASP API Security Top 10](https://owasp.org/www-project-api-security/) —— API 安全最佳实践

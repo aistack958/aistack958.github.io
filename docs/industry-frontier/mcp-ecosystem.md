@@ -1,3 +1,8 @@
+---
+title: MCP生态演进
+description: 解读Model Context Protocol的生态扩张路径，理解工具标准化如何重塑Agent开发范式。
+---
+
 # MCP生态演进
 
 Model Context Protocol（MCP）正在成为Agent生态中"工具层"的基建协议。理解MCP的演进路径，不仅是理解一个协议的技术细节，更是理解**Agent开发范式的结构性转变**——从"每个Agent自己集成一切"到"工具作为共享基础设施按需接入"。
@@ -47,3 +52,22 @@ MCP的演进方向可以从三个维度预判：
 **协作层**——当多个Agent通过共享的MCP Server协同工作时，Server本身需要支持并发访问、状态隔离、数据冲突解决等分布式协作能力。这将推动MCP从"Client-Server"走向更复杂的"多Client-多Server"协作网络。
 
 对Agent工程师而言，当下最务实的行动是：**开始为你的业务场景构建MCP Server**。不要等待"完美生态"——在你的企业内部，将最常用的数据源和工具封装为MCP Server，这本身就是对生态的贡献，也是让你的Agent系统从"Demo级集成"迈向"生产级连接"的关键一步。
+---
+
+## 本章小结
+
+MCP 生态扩张三维度：
+1. **基础设施层**：传输协议标准化、Server 发现机制、认证体系
+2. **智能匹配层**：工具语义理解、动态能力匹配、上下文自适应
+3. **协作网络层**：多 Server 编排、跨平台互操作、社区治理
+
+**关键挑战**：认证标准化、工具质量参差、Server 治理与版本管理。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [MCP Server 列表](https://github.com/modelcontextprotocol/servers) —— 官方社区 Server 汇总
+> 2. [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) —— Python 开发工具包
+> 3. [npm MCP SDK](https://www.npmjs.com/package/@modelcontextprotocol/sdk) —— TypeScript 开发工具包
+> 4. [MCP Inspector](https://github.com/modelcontextprotocol/inspector) —— Server 调试工具

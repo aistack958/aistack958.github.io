@@ -4,6 +4,8 @@ title: Agent 基本范式：ReAct、Plan-and-Execute 与 Reflexion
 
 # Agent 基本范式：ReAct、Plan-and-Execute 与 Reflexion
 
+![三大 Agent 范式对比](./images/react-pattern.png)
+
 Agent 的核心设计问题在于：智能体应当如何组织其"思考"与"行动"的循环？不同的范式选择深刻地影响着 Agent 的行为特征、推理质量与适用场景。本节将深入剖析三大经典 Agent 范式，理解它们的内在机制与设计权衡。
 
 ## ReAct：推理与行动交织
@@ -66,3 +68,28 @@ Reflexion 在**需要多次尝试与试错**的场景中效果显著，如代码
 | 计算成本 | 中 | 较高（规划+执行） | 高（多次尝试+反思） |
 
 在实际系统设计中，三大范式并非互斥。许多现代 Agent 框架采用**混合策略**：在 Plan-and-Execute 的全局规划框架内，每个子步骤的执行采用 ReAct 的交织模式；当整体任务失败时，通过 Reflexion 的反思机制总结教训并优化后续任务的规划质量。选择何种范式或组合，取决于任务特性、成本预算与可靠性要求。
+
+---
+
+## 本章小结
+
+| 范式 | 核心循环 | 全局视野 | 最佳场景 | 计算成本 |
+|------|---------|---------|---------|---------|
+| **ReAct** | Thought → Action → Observation | 较弱 | 交互密集型任务（问答、检索） | 中 |
+| **Plan-and-Execute** | Plan → Execute → Replan | 强 | 结构化复杂任务（数据处理、运维） | 较高 |
+| **Reflexion** | Attempt → Evaluate → Reflect → Retry | 中等 | 试错迭代型任务（代码调试、策略游戏） | 高 |
+
+**实践建议**：
+- 先用 ReAct 快速验证交互逻辑
+- 任务超过 5 步时引入 Plan-and-Execute
+- 需要反复试错的场景加入 Reflexion
+- 生产环境推荐混合策略：全局规划 + 局部 ReAct + 失败反思
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) —— ReAct 原论文
+> 2. [Reflexion: Self-Reflective Agents](https://arxiv.org/abs/2303.11366) —— Reflexion 原论文
+> 3. [LangGraph Plan-and-Execute](https://langchain-ai.github.io/langgraph/how-tos/plan-and-execute/) —— 官方实现示例
+> 4. [OpenAI Agents SDK](https://platform.openai.com/docs/guides/agents) —— 官方 Agent 开发指南

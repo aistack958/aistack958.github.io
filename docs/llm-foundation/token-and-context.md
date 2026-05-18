@@ -1,3 +1,8 @@
+---
+title: Token、上下文窗口与成本核算
+description: 理解 Token 计算方式、上下文窗口限制与 API 定价结构，做出经济最优的 Agent 工程决策。
+---
+
 # Token、上下文窗口与成本核算
 
 理解 Token 的计算方式、上下文窗口的限制、以及 API 定价的逻辑，是做出经济合理的工程决策的基础。这些看似"运营细节"的知识，实际上深刻影响着你的 Agent 架构设计——从 prompt 精炼度到工具调用策略，都受 Token 经济学的约束。
@@ -97,4 +102,24 @@ Token 是 LLM 处理文本的最小单位，既不是字符也不是词。它介
 
 ---
 
+## 本章小结
+
+| 主题 | 核心结论 |
+|------|---------|
+| **Token 计算** | 中文约 1-1.5 字/Token（Qwen 最优），英文约 4 字符/Token；代码 Token 消耗极高 |
+| **上下文窗口** | Claude 200K 最优，但实际有效利用约 150K；GPT-4o 128K，64K 后准确率下降 |
+| **成本核算** | 单次调用成本 = (输入 Token × 输入单价 + 输出 Token × 输出单价) / 1M |
+| **降本策略** | 分层模型（强模型+轻量模型）、Prompt 缓存、输出长度控制、Batch API |
+
+**决策口诀**：实验阶段用 mini/Haiku 验证，生产阶段按需切换；长文本优先 Claude，高频调用优先自托管 Llama；中文场景 Qwen Token 效率最高。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [OpenAI Pricing](https://openai.com/api/pricing/) —— 官方定价与计费规则
+> 2. [Anthropic Token Counting](https://docs.anthropic.com/en/docs/build-with-claude/token-counting) —— Claude Token 计数指南
+> 3. [OpenAI Prompt Caching](https://platform.openai.com/docs/guides/prompt-caching) —— Prompt 缓存机制详解
+> 4. [Tiktoken 文档](https://github.com/openai/tiktoken) —— OpenAI 开源 Token 计数库
+>
 > 💡 **决策建议**：在项目初期先用 GPT-4o-mini 或 Claude Haiku 快速验证 Agent 逻辑，确认可行后再切换到强模型优化输出质量。不要在实验阶段就用最贵的模型——试错成本会拖垮项目节奏。

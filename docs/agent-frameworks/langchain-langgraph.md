@@ -1,4 +1,11 @@
+---
+title: LangChain 与 LangGraph
+description: 理解 LangChain 核心抽象与 LangGraph 状态图编排引擎，掌握从简单工具调用到复杂状态图 Agent 的构建方法。
+---
+
 # LangChain 与 LangGraph
+
+![LangGraph 状态图示例](./images/langchain-langgraph.png)
 
 LangChain 是目前生态最广泛的开源 Agent 开发框架，从 2022 年底发布以来经历了多次架构演进。LangGraph 作为 LangChain 生态中的状态图编排引擎，解决了早期 LangChain Agent 在执行流程可控性上的核心痛点。理解两者的关系与分工，是掌握 LangChain 生态的关键。
 
@@ -43,3 +50,24 @@ LangGraph 正是为了解决上述痛点而生。它将 Agent 的执行流程建
 - **生产环境要求**：LangGraph 的中断恢复、状态持久化、并发控制等特性更适合生产部署。
 
 相比之下，如果只需要简单的工具调用循环，LangChain 的 `AgentExecutor` 或官方 SDK 可能更轻量直接。LangGraph 的学习曲线较高，但付出的成本在复杂场景下会带来显著的架构优势。
+---
+
+## 本章小结
+
+| 维度 | LangChain | LangGraph |
+|------|-----------|-----------|
+| **核心抽象** | Chain、Agent、Tool、Memory | State、Node、Edge、Checkpoint |
+| **流程控制** | 循环执行（AgentExecutor） | 状态图编排（可分支、可中断） |
+| **适用场景** | 简单工具调用、快速原型 | 复杂多步任务、生产部署 |
+| **学习曲线** | 低 | 较高 |
+
+**选型建议**：简单 Agent 用 LangChain 的 `AgentExecutor`；需要精细流程控制、人工介入、多 Agent 协作时用 LangGraph。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [LangChain 官方文档](https://python.langchain.com/docs/introduction/) —— 核心概念与快速入门
+> 2. [LangGraph 官方文档](https://langchain-ai.github.io/langgraph/) —— 状态图编排详解
+> 3. [LangChain Expression Language (LCEL)](https://python.langchain.com/docs/concepts/lcel/) —— 链式表达式语法
+> 4. [LangGraph Checkpoint 机制](https://langchain-ai.github.io/langgraph/concepts/persistence/) —— 状态持久化与恢复

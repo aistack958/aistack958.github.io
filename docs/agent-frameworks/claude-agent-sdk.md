@@ -1,3 +1,8 @@
+---
+title: Claude Agent SDK 与 Anthropic API
+description: 掌握 Claude Agent SDK 的工具定义、流式处理、Agent 循环与 MCP 集成，以及与 Claude 模型深度适配的开发技巧。
+---
+
 # Claude Agent SDK 与 Anthropic API
 
 Anthropic 在 2025 年推出了 Claude Agent SDK，为基于 Claude 模型构建 Agent 应用提供了官方开发工具。与第三方框架相比，Agent SDK 的最大优势在于与 Claude 模型能力的深度适配——从工具调用的协议设计到流式输出的处理方式，都围绕 Claude 的特性做了针对性优化。
@@ -64,3 +69,23 @@ Anthropic 是 MCP（Model Context Protocol）协议的主要推动者，Agent SD
 - **标准化的工具交互**：MCP 协议统一了工具描述、调用和返回的格式，消除了不同工具提供方之间的适配成本。
 
 这种集成使 Claude Agent SDK 的工具生态不再局限于开发者手动定义的范围，而是可以接入整个 MCP 工具网络，显著扩展了 Agent 的能力边界。
+---
+
+## 本章小结
+
+Claude Agent SDK 的核心优势在于与 Claude 模型的深度适配：
+- **工具调用**：`input_schema` 格式直接可用，无需二次解析
+- **流式处理**：支持 SSE 实时推送推理过程
+- **Agent 循环**：简化的 `while` 循环 + 工具结果注入
+- **MCP 集成**：动态发现外部工具，扩展能力边界
+
+**适用场景**：已选择 Claude 作为主要模型的团队，追求与模型原生能力的最优匹配。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Anthropic Agent SDK 文档](https://docs.anthropic.com/en/docs/agents-and-tools/overview) —— 官方开发指南
+> 2. [Anthropic Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) —— 工具调用协议详解
+> 3. [Anthropic Streaming](https://docs.anthropic.com/en/docs/build-with-claude/streaming) —— 流式输出实现
+> 4. [MCP Integration](https://docs.anthropic.com/en/docs/agents-and-tools/mcp) —— MCP Client 模式集成

@@ -94,3 +94,25 @@ LLM 的幻觉（Hallucination）——即生成看似合理但实际错误或虚
 - **建议人类介入**：当 Agent 判断自身无法安全完成任务时，主动建议将任务转交人类处理。
 
 > 💡 **核心原则**：安全的 Agent 不是"永远不会犯错"的 Agent，而是"犯错时有防护、偏差时有纠正、失控时有兜底"的 Agent。安全架构的目标不是消灭风险，而是将风险控制在可接受范围内，并确保任何失败都有清晰的发现、阻止与恢复机制。
+
+---
+
+## 本章小结
+
+| 安全层级 | 防护目标 | 核心机制 |
+|---------|---------|---------|
+| **输入层** | Prompt 注入、恶意输入 | 意图检测、关键词过滤、输入隔离 |
+| **权限层** | 工具滥用、越权操作 | 最小权限原则、操作审计、预算上限 |
+| **输出层** | 幻觉、有害内容、信息泄露 | 置信度评分、敏感信息过滤、事实校验 |
+| **兜底层** | 失控循环、系统性故障 | 优雅降级、人工介入、熔断机制 |
+
+**安全设计原则**：多层叠加 > 单层强控；预防 > 检测 > 恢复；权限最小化 > 权限最大化。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) —— Anthropic 安全对齐方法
+> 2. [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) —— LLM 安全风险清单
+> 3. [OpenAI Safety Best Practices](https://platform.openai.com/docs/guides/safety-best-practices) —— 官方安全指南
+> 4. [LlamaGuard: LLM-based Input-Output Safeguard](https://ai.meta.com/research/publications/llamaguard-llm-based-input-output-safeguard-for-human-ai-conversations/) —— 内容安全审核模型

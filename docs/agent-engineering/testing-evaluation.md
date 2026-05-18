@@ -256,3 +256,28 @@ jobs:
 2. **问题定位**：评测发现退化 → Trace 分析 → 定位根因（检索问题？Prompt 问题？工具问题？）
 3. **修复与验证**：修复问题 → 回归测试验证 → 确认无新退化 → 上线。
 4. **数据集扩充**：从用户反馈中提取新的评估条目，持续扩充评测数据集的覆盖度。
+---
+
+## 本章小结
+
+| 测试类型 | 关注点 | 方法 |
+|---------|--------|------|
+| **单元测试** | 工具函数、解析逻辑 | 传统自动化测试 |
+| **效果评估** | 回答质量、任务完成率 | 自动化指标 + 人工评估 |
+| **回归测试** | 修改是否破坏已有能力 | 固定测试集 + 基线对比 |
+| **对抗测试** | 边界情况、恶意输入 | 专门构造的异常用例 |
+
+**评估核心原则**：
+- 不要只测"平均表现"，要测"最差表现"
+- 用 LLM-as-Judge 时必须有标准答案作为参照
+- 每次 Prompt 修改都要跑回归测试
+- 建立持续评估流水线，而非一次性评估
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Evaluating LLM-based Systems](https://www.oreilly.com/radar/what-we-learned-from-a-year-of-building-with-llms/) —— O'Reilly LLM 工程经验总结
+> 2. [RAGAS](https://docs.ragas.io/) —— RAG 评估框架
+> 3. [MLflow Tracking](https://mlflow.org/docs/latest/tracking.html) —— 实验追踪与模型管理
+> 4. [PromptLayer](https://promptlayer.com/) —— Prompt 版本管理与 A/B 测试

@@ -147,3 +147,24 @@ data: {
 2. 说明错误性质："库存服务暂时不可用"而非"Error 500"。
 3. 说明 Agent 的应对策略："正在使用缓存数据替代实时查询，结果可能略有延迟"。
 4. 给用户选择："您可以等待恢复、查看缓存数据，或稍后再试"。
+---
+
+## 本章小结
+
+| UX 维度 | 关键策略 |
+|---------|---------|
+| **传输技术** | SSE（单向）vs WebSocket（双向），按场景选择 |
+| **渲染策略** | Markdown 增量渲染 + 打字机效果，平衡实时感与可读性 |
+| **进度反馈** | 状态标签 + 进度条 + 步骤计数，降低用户焦虑 |
+| **错误处理** | 区分技术错误（静默重试）与业务错误（明确告知） |
+
+**UX 核心原则**：用户不需要知道 Agent 在"思考"，只需要知道"进展如何"。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) —— MDN 官方文档
+> 2. [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket) —— MDN 官方文档
+> 3. [OpenAI Streaming Guide](https://platform.openai.com/docs/guides/streaming) —— 流式输出最佳实践
+> 4. [React Markdown](https://github.com/remarkjs/react-markdown) —— Markdown 增量渲染组件

@@ -4,6 +4,8 @@ title: RAG 工程化
 
 # RAG 工程化
 
+![RAG 完整链路架构图](./images/rag-engineering.png)
+
 RAG（Retrieval-Augmented Generation）是 Agent 获取外部知识的核心手段。但在生产环境中，"能检索"和"检索得好"之间差距巨大——召回率不足、相关性排序错误、上下文窗口浪费，每一个问题都会直接拉低 Agent 的最终回答质量。本章从检索策略、Embedding 选型、重排序、质量评估到常见坑点，系统讲解 RAG 工程化的关键实践。
 
 ## 检索策略设计
@@ -105,3 +107,24 @@ RAG 系统需要量化评估才能持续优化，核心指标包括：
 ### 更新与一致性
 
 知识库文档更新后，向量索引必须同步更新。否则用户查询会命中已过时的内容。建立 **文档更新 → 自动重新 Embedding → 索引更新** 的流水线，并设置定期全量重建索引的兜底机制。
+---
+
+## 本章小结
+
+| 维度 | 关键决策 |
+|------|---------|
+| **检索策略** | 稠密检索（语义）+ 稀疏检索（关键词）→ 混合检索最优 |
+| **嵌入模型** | 通用场景选 text-embedding-3，垂直领域选微调模型 |
+| **评估指标** | Recall@K、Precision@K、NDCG@K，构建自定义测试集 |
+| **优化方向** | 语义分块 > 固定分块；重排序 > 单路检索；元数据过滤 > 全量扫描 |
+
+**RAG 成功公式**：优质文档 → 智能分块 → 混合检索 → 重排序 → 上下文压缩 → 答案生成
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Retrieval-Augmented Generation for Large Language Models: A Survey](https://arxiv.org/abs/2312.10997) —— RAG 技术综述
+> 2. [LangChain RAG Tutorial](https://python.langchain.com/docs/tutorials/rag/) —— 官方 RAG 实现教程
+> 3. [Embedding Models Leaderboard](https://huggingface.co/spaces/mteb/leaderboard) —— MTEB 嵌入模型排行榜
+> 4. [RAGFlow 开源项目](https://github.com/infiniflow/ragflow) —— 深度文档理解的 RAG 引擎

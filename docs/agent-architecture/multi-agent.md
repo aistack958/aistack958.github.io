@@ -4,6 +4,8 @@ title: 多 Agent 协作：分工策略、通信机制与编排模式
 
 # 多 Agent 协作：分工策略、通信机制与编排模式
 
+![多 Agent 协作架构](./images/multi-agent.png)
+
 单个 Agent 的能力受限于其角色定位、知识范围与推理深度。当面对复杂的多维度任务时，多 Agent 协作通过角色分工与群体智慧突破了单体能力的上限，成为当前 Agent 架构设计中最重要的演进方向之一。
 
 ## 分工策略：角色化的智能体设计
@@ -66,3 +68,25 @@ Agent 按照固定顺序依次执行，前一个 Agent 的输出作为后一个 
 现实系统往往采用混合编排策略。一个典型的模式是：Manager Agent 使用层级编排进行全局任务分解与分配，被分配的子任务组内部采用并行编排加速执行，而需要严格顺序的子任务链则采用顺序编排保障一致性。编排模式的选择应当基于任务依赖图的分析——子任务间的依赖关系决定了哪些可以并行、哪些必须顺序、哪些需要层级管理。
 
 > 💡 **设计原则**：分工策略应追求"高内聚低耦合"——每个 Agent 的职责边界清晰，接口定义简洁。通信机制应匹配编排模式——顺序编排适合消息传递，并行编排适合共享状态，层级编排适合黑板系统。
+
+---
+
+## 本章小结
+
+| 维度 | 顺序编排 | 并行编排 | 层级编排 |
+|------|---------|---------|---------|
+| **结构** | 线性链式 | 多分支并行 | 树状管理 |
+| **通信** | 消息传递 | 共享状态 | 黑板系统 |
+| **适用场景** | 依赖链明确的任务 | 子任务独立的任务 | 复杂度高的项目 |
+| **核心风险** | 单点故障 | 结果整合困难 | 信息衰减 |
+
+**设计原则**：2-3 个 Agent 的简单协作往往比 7-8 个 Agent 的复杂编排更实用；多 Agent 调试成本远高于单 Agent，先验证单 Agent 可行性再拆分。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](https://arxiv.org/abs/2308.08155) —— 多 Agent 对话框架原论文
+> 2. [CrewAI Documentation](https://docs.crewai.com/) —— 角色驱动多 Agent 框架
+> 3. [MetaGPT: Meta Programming for Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352) —— 多 Agent 协作原论文
+> 4. [LangGraph Multi-Agent](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/) —— 官方多 Agent 教程

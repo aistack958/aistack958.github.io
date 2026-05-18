@@ -176,3 +176,24 @@ user_budget = {
 - **无用的上下文**：检索返回了 10 条文档但只有 3 条有用——优化检索质量，减少送入 LLM 的无效内容。
 
 **精简原则**：每减少 1 个输入 Token，在日活 10000 的场景下每月节省约 $0.3（按 GPT-4o 输入价）。精简 500 Token 的系统 Prompt = 每月节省 $150。
+---
+
+## 本章小结
+
+| 优化维度 | 策略 | 预期收益 |
+|---------|------|---------|
+| **模型分层** | 简单任务用轻量模型，复杂任务用强模型 | 成本降低 5-10 倍 |
+| **Prompt 缓存** | 缓存系统提示和工具定义 | 输入费用降低 50-90% |
+| **并发优化** | 批量调用、异步流水线 | 吞吐量提升 3-5 倍 |
+| **部署架构** | 容器化 + 弹性伸缩 + 预热 | 延迟降低 50%+ |
+
+**成本优化口诀**：能用 mini 不用 max，能缓存不重复，能批量不串行，能预热不等冷启动。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [OpenAI Pricing](https://openai.com/api/pricing/) —— 官方定价与折扣策略
+> 2. [Anthropic Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) —— 缓存机制详解
+> 3. [Kubernetes Autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) —— 弹性伸缩配置
+> 4. [vLLM Documentation](https://docs.vllm.ai/) —— 高性能 LLM 推理服务

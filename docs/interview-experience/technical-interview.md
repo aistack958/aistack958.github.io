@@ -1,3 +1,8 @@
+---
+title: 技术面试实战技巧
+description: 如何讲清楚Agent系统设计、白板推导注意力机制、现场写Agent代码，以及应对追问的实战方法论。
+---
+
 # 技术面试实战技巧
 
 技术面试不是考试，而是展示你思维方式和工程判断力的过程。本章提供具体的答题方法论，帮助你把已有的技术积累最大化地呈现给面试官。
@@ -58,3 +63,25 @@
 4. **结构化回应**：追问时不要发散式回答，保持"问题定位→原因分析→解决方案→验证思路"的结构
 
 压力面试的本质不是刁难，而是模拟真实工作中遇到质疑和约束的场景。展示你在压力下依然能结构化思考、灵活调整方案，比给出一个"完美答案"更有价值。
+---
+
+## 本章小结
+
+技术面试四层应答法：
+1. **需求澄清**：确认边界条件、明确约束
+2. **架构设计**：分层阐述、权衡对比
+3. **核心实现**：关键代码、复杂度分析
+4. **扩展讨论**：容错、监控、演进
+
+**现场编码**：先写骨架再填细节、边写边说、主动提边界情况。
+
+**追问应对**：承认不知道 > 瞎猜；给出思考方向 > 直接放弃。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Coding Interview University](https://github.com/jwasham/coding-interview-university) —— 编程面试完整准备指南
+> 2. [Designing Data-Intensive Applications](https://dataintensive.net/) —— 系统设计必读书
+> 3. [Cracking the Coding Interview](http://www.crackingthecodinginterview.com/) —— 经典面试书
+> 4. [ByteByteGo System Design](https://bytebytego.com/) —— 系统设计视频课程

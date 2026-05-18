@@ -1,4 +1,11 @@
+---
+title: MCP 协议详解
+description: 深入理解 Model Context Protocol 的三层标准化设计、Client-Server 架构与工具生态扩张路径。
+---
+
 # MCP 协议详解
+
+![MCP Client-Server 架构](./images/mcp-protocol.png)
 
 Model Context Protocol（MCP）是 Anthropic 在 2024 年底发布的开放协议，旨在为大模型与外部工具、数据源之间的交互建立统一标准。如果把 Agent 框架比作汽车的发动机和传动系统，MCP 就是标准化的轮胎接口——不管什么品牌的车，都可以安装标准规格的轮胎。MCP 解决的核心问题是工具生态的碎片化：每个 Agent 框架有自己的工具定义格式，每个工具提供方需要为每个框架做适配，这种 N×M 的适配成本严重阻碍了 Agent 生态的发展。
 
@@ -93,3 +100,22 @@ MCP 的重要性不仅在于技术层面的标准化，更在于它正在改变 
 - **为模型竞争解耦工具层**：不同模型的工具调用格式差异被 MCP 协议屏蔽，开发者可以自由切换模型而不必重做工具集成。
 
 MCP 的愿景是成为 Agent 生态的基础协议层——类似 HTTP 对 Web 生态的角色。如果这个愿景实现，Agent 开发者将不再被某个框架或模型厂商的工具生态锁定，而是可以在统一标准下自由组合模型、框架和工具，真正实现"模型是大脑、框架是骨架、MCP 是神经"的分层架构。
+---
+
+## 本章小结
+
+MCP 协议的三层标准化：
+1. **传输层**：stdio / SSE 两种通信方式
+2. **协议层**：Tools、Resources、Prompts 三类接口规范
+3. **应用层**：Client 发现与调用 Server 提供的标准化能力
+
+**核心价值**：将工具集成从 N×M 适配降低为 N+M 适配，促进工具生态繁荣。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [MCP 官方文档](https://modelcontextprotocol.io/) —— 协议规范与快速入门
+> 2. [MCP GitHub](https://github.com/modelcontextprotocol) —— 官方实现与示例 Server
+> 3. [Anthropic MCP 公告](https://www.anthropic.com/news/model-context-protocol) —— 协议发布官方博客
+> 4. [MCP Server 生态](https://github.com/modelcontextprotocol/servers) —— 社区贡献的 MCP Server 列表

@@ -4,6 +4,8 @@ title: 可观测性
 
 # 可观测性
 
+![Agent 可观测性链路图](./images/observability.png)
+
 Agent 的推理链路涉及模型决策、工具调用、上下文拼接等多个环节，出了问题时"看不见哪里错了"是最常见的困境。可观测性（Observability）是 Agent 工程化的基础设施——没有它，调试靠猜测、优化靠直觉、评估靠感觉。本章讲解 Trace 链路追踪、调试工具、效果评估指标以及 Langfuse/Phoenix 等平台的实战接入。
 
 ## Trace 链路追踪
@@ -173,3 +175,24 @@ Phoenix 的特点：
 - **快速验证/小团队**：Phoenix，启动快、够用。
 - **生产级/需要评估体系**：Langfuse，功能更全面，社区更活跃。
 - **已有 OTel 体系**：用 OTel SDK 生成 Trace，接入现有 Grafana/Jaeger 体系。
+---
+
+## 本章小结
+
+| 可观测性维度 | 核心组件 | 关键指标 |
+|-------------|---------|---------|
+| **链路追踪** | Span → Trace → 调用树 | 推理步数、工具调用次数、端到端延迟 |
+| **指标监控** | 过程指标 + 结果指标 + 成本指标 | 成功率、满意度、Token 消耗 |
+| **日志管理** | 结构化日志 + 关联 ID | 错误率、异常模式、用户投诉 |
+| **平台选择** | Langfuse / Phoenix / 自建 | 按团队规模与预算选择 |
+
+**核心原则**：不可观测的系统不可优化——在生产环境中，Agent 的每个决策都必须留下痕迹。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [OpenTelemetry](https://opentelemetry.io/) —— 开源可观测性标准
+> 2. [Langfuse Documentation](https://langfuse.com/docs) —— LLM 可观测性平台
+> 3. [Arize Phoenix](https://docs.arize.com/phoenix) —— LLM 追踪与评估平台
+> 4. [Grafana + Prometheus](https://grafana.com/solutions/prometheus/) —— 指标监控经典组合

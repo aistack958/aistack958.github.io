@@ -1,3 +1,8 @@
+---
+title: Agent相关面试题解析
+description: 10+高频面试题及参考答案，覆盖多Agent系统设计、RAG与微调选择、Agent效果评估等核心考点。
+---
+
 # Agent 相关面试题解析
 
 本章精选 AI Agent 岗位的高频面试题，每道题给出考点分析、参考回答框架和加分要点。这些题目覆盖了 Agent 架构设计、工具调用、检索增强、效果评估、协议标准等核心领域。
@@ -121,3 +126,27 @@ ReAct（思考-行动-观察循环）的核心优势是**动态适应**——Age
 **参考回答框架**：
 
 核心挑战包括：**延迟管理**（多步Agent推理的响应时间远超单次LLM调用）、**稳定性保障**（LLM输出的不确定性导致Agent行为不可预测）、**可观测性**（Agent的决策链路复杂，排查问题困难）、**成本控制**（多步推理的token消耗是乘法级增长）、**安全合规**（Agent自主调用外部工具带来权限和数据安全风险）。每个挑战都需要专门的工程方案，而非单纯靠更好的LLM来解决。
+---
+
+## 本章小结
+
+十大高频面试题回顾：
+1. 多 Agent 系统设计 —— 协作模式 + 通信机制
+2. RAG vs 微调 —— 知识注入 vs 行为塑造
+3. Agent 评估 —— 任务完成率 + 步骤效率 + 工具准确率 + 成本效率
+4. MCP 协议 —— 标准化工具接口
+5. 记忆机制 —— 短期 + 长期 + 三层架构
+6. 工具调用失败 —— 重试 + 降级 + 反馈学习
+7. 安全边界 —— 输入过滤 + 权限分级 + 输出审查
+8. ReAct vs 规划式 —— 动态适应 vs 全局一致
+9. 推理成本优化 —— 分层模型 + 缓存 + 提示压缩
+10. 生产环境挑战 —— 延迟 + 稳定性 + 可观测性 + 成本 + 安全
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [Machine Learning Interviews](https://github.com/khangich/machine-learning-interviews) —— ML 面试题汇总
+> 2. [LLM Interview Questions](https://github.com/llm-interview/llm-interview-questions) —— LLM 专项面试题
+> 3. [System Design for ML](https://github.com/chiphuyen/machine-learning-systems-design) —— ML 系统设计
+> 4. [MLOps Interview Questions](https://github.com/ML-OPS-Interview-Questions/mlops-interview-questions) —— MLOps 面试题

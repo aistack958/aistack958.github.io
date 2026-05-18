@@ -1,3 +1,8 @@
+---
+title: OpenAI Agents SDK
+description: 了解 OpenAI Agents SDK 的极简架构设计，掌握 Agent、Tool、Runner、Guardrails 核心概念与多 Agent Handoff 机制。
+---
+
 # OpenAI Agents SDK
 
 OpenAI 在 2025 年正式发布了 Agents SDK（此前以 Swarm 实验项目为原型），定位为构建多 Agent 系统的轻量级框架。与 LangGraph 的状态图复杂度不同，Agents SDK 追求极简的架构设计——几个核心概念覆盖了 Agent 开发的主要需求，代码量少、学习成本低、与 OpenAI 模型深度适配。
@@ -69,3 +74,24 @@ Runner 的内部实现是一个标准的 Agent 循环，但它在循环中集成
 护栏函数返回 `GuardrailResult`，包含是否通过和可选的修正信息。不通过的输入或输出会被拦截，Runner 根据配置决定是抛出异常还是使用修正后的内容继续执行。
 
 这种设计让安全控制从"事后审查"变为"流程内嵌"，在每个 Agent 循环的关键节点自动执行，无需开发者手动在每一步插入检查逻辑。
+---
+
+## 本章小结
+
+OpenAI Agents SDK 的核心设计理念是**极简**：
+- **Agent**：角色 + 工具 + 指令
+- **Tool**：带 JSON Schema 的函数
+- **Runner**：驱动执行循环（串行/并行）
+- **Guardrails**：输入/输出安全校验
+- **Handoff**：多 Agent 任务移交
+
+**适用场景**：OpenAI 模型用户、快速原型开发、多 Agent 轻量协作。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [OpenAI Agents SDK 文档](https://platform.openai.com/docs/guides/agents) —— 官方指南
+> 2. [OpenAI Agents SDK GitHub](https://github.com/openai/openai-agents-python) —— 开源代码与示例
+> 3. [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling) —— 工具调用协议
+> 4. [Swarm 实验项目](https://github.com/openai/swarm) —— Agents SDK 的前身项目

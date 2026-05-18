@@ -1,4 +1,11 @@
+---
+title: 面试题型与考点分析
+description: 各大厂AI Agent岗位面试题型分布与占比，理论基础题、系统设计题、场景题的应对策略。
+---
+
 # 面试题型与考点分析
+
+![面试题型分布](./images/question-types.png)
 
 了解面试题型的分布规律和背后考察意图，是高效备考的第一步。不同公司对 AI Agent 岗位的面试侧重点差异明显，掌握这些规律可以帮你把有限的准备时间花在刀刃上。
 
@@ -49,3 +56,24 @@
 行为面试题如"你在团队中如何处理技术分歧"、"你如何快速学习一个新技术"、"你最失败的一个项目经历是什么"。
 
 **应对策略**：用 STAR 法则（Situation-Task-Action-Result）结构化回答，在 Result 部分务必加上 Reflection（反思），展示你的成长闭环。避免空泛回答，每个行为题都配合一个具体的技术场景来讲述。
+---
+
+## 本章小结
+
+五大面试题型分布：
+- **理论基础**（25-30%）：Transformer、注意力机制、Tokenizer
+- **系统设计**（20-25%）：Agent 架构、多 Agent 协作、RAG
+- **场景应用**（15-20%）：业务案例适配、方案选型
+- **项目深度**（20-25%）：技术决策、踩坑经历、优化思路
+- **行为面试**（10-15%）：团队协作、冲突处理、成长反思
+
+**公司差异**：大厂重理论+系统设计，创业公司重项目+实操，研究团队重论文+前沿。
+
+---
+
+> 📖 **延伸阅读**
+>
+> 1. [LeetCode](https://leetcode.com/) —— 算法面试题库
+> 2. [System Design Primer](https://github.com/donnemartin/system-design-primer) —— 系统设计面试指南
+> 3. [AI 面试题库](https://github.com/zhedongzheng/fantasy-machine-learning) —— 机器学习面试题汇总
+> 4. [Behavioral Interview Guide](https://www.amazon.jobs/content/en/our-workplace/interviewing-at-amazon) —— 行为面试 STAR 法则
