@@ -97,7 +97,7 @@ export default defineUserConfig({
         {
           text: 'LLM 核心能力',
           children: [
-            '/llm-foundation/',
+            { text: '模块概览', link: '/llm-foundation/' },
             '/llm-foundation/transformer',
             '/llm-foundation/model-comparison',
             '/llm-foundation/prompt-engineering',
@@ -110,7 +110,7 @@ export default defineUserConfig({
         {
           text: 'Agent 架构与设计',
           children: [
-            '/agent-architecture/',
+            { text: '模块概览', link: '/agent-architecture/' },
             '/agent-architecture/react-pattern',
             '/agent-architecture/multi-agent',
             '/agent-architecture/memory-system',
@@ -123,7 +123,7 @@ export default defineUserConfig({
         {
           text: 'Agent 开发框架',
           children: [
-            '/agent-frameworks/',
+            { text: '模块概览', link: '/agent-frameworks/' },
             '/agent-frameworks/langchain-langgraph',
             '/agent-frameworks/claude-agent-sdk',
             '/agent-frameworks/openai-agents-sdk',
@@ -137,7 +137,7 @@ export default defineUserConfig({
         {
           text: 'Agent 工程实践',
           children: [
-            '/agent-engineering/',
+            { text: '模块概览', link: '/agent-engineering/' },
             '/agent-engineering/rag-engineering',
             '/agent-engineering/tool-design',
             '/agent-engineering/streaming-ux',
@@ -151,7 +151,7 @@ export default defineUserConfig({
         {
           text: 'Agent 实战项目',
           children: [
-            '/agent-projects/',
+            { text: '模块概览', link: '/agent-projects/' },
             '/agent-projects/coding-assistant',
             '/agent-projects/knowledge-qa-agent',
             '/agent-projects/data-analysis-agent',
@@ -165,7 +165,7 @@ export default defineUserConfig({
         {
           text: '行业前沿',
           children: [
-            '/industry-frontier/',
+            { text: '模块概览', link: '/industry-frontier/' },
             '/industry-frontier/paper-review',
             '/industry-frontier/open-source-tracking',
             '/industry-frontier/mcp-ecosystem',
