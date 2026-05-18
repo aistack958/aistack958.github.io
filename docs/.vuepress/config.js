@@ -148,6 +148,7 @@ export default defineUserConfig({
             '/agent-frameworks/autogen-crewai',
             '/agent-frameworks/dify-coze',
             '/agent-frameworks/mcp-protocol',
+            '/agent-frameworks/skill-system',
           ],
         },
       ],
