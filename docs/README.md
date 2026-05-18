@@ -23,6 +23,8 @@ features:
     details: 智能编程助手、知识库问答、数据分析——用作品证明能力。
   - title: 行业前沿
     details: 论文解读、开源追踪、职业路径——保持视野，抓住机遇。
+  - title: 面试经验分享
+    details: 面试题型、Agent高频题解析、项目包装、心态准备——通关面试全攻略。
 
 footer: AI小栈 | AI Agent 工程师转型实战指南
 ---

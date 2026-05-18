@@ -92,6 +92,18 @@ export default defineUserConfig({
           { text: '职业路径', link: '/industry-frontier/career-path' },
         ],
       },
+      {
+        text: '面试经验',
+        link: '/interview-experience/',
+        children: [
+          { text: '模块概览', link: '/interview-experience/' },
+          { text: '题型与考点分析', link: '/interview-experience/question-types' },
+          { text: '技术面试实战', link: '/interview-experience/technical-interview' },
+          { text: 'Agent 面试题解析', link: '/interview-experience/agent-questions' },
+          { text: '项目经验包装', link: '/interview-experience/project-presentation' },
+          { text: '流程与心态准备', link: '/interview-experience/process-mindset' },
+        ],
+      },
     ],
 
     sidebar: {
@@ -173,6 +185,19 @@ export default defineUserConfig({
             '/industry-frontier/mcp-ecosystem',
             '/industry-frontier/commercialization',
             '/industry-frontier/career-path',
+          ],
+        },
+      ],
+      '/interview-experience/': [
+        {
+          text: '面试经验分享',
+          children: [
+            { text: '模块概览', link: '/interview-experience/' },
+            '/interview-experience/question-types',
+            '/interview-experience/technical-interview',
+            '/interview-experience/agent-questions',
+            '/interview-experience/project-presentation',
+            '/interview-experience/process-mindset',
           ],
         },
       ],
