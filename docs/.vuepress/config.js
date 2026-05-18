@@ -12,6 +12,8 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
+    lastUpdated: false,
+    contributors: false,
 
     navbar: [
       { text: '首页', link: '/' },
