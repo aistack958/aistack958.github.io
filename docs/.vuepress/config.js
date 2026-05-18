@@ -2,6 +2,10 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { copyCodePlugin } from '@vuepress/plugin-copy-code'
+import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
+import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
+import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -214,6 +218,12 @@ export default defineUserConfig({
           placeholder: '搜索',
         },
       },
+    }),
+    copyCodePlugin(),
+    mediumZoomPlugin(),
+    backToTopPlugin(),
+    sitemapPlugin({
+      hostname: 'https://aistack958.github.io',
     }),
   ],
 })

@@ -18,6 +18,10 @@
     "vuepress": "^2.0.0-rc.30"
   },
   "dependencies": {
-    "@vuepress/plugin-search": "^2.0.0-rc.130"
+    "@vuepress/plugin-back-to-top": "^2.0.0-rc.130",
+    "@vuepress/plugin-copy-code": "^2.0.0-rc.130",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-rc.130",
+    "@vuepress/plugin-search": "^2.0.0-rc.130",
+    "@vuepress/plugin-sitemap": "^2.0.0-rc.130"
   }
 }
