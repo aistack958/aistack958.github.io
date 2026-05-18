@@ -8,12 +8,161 @@ export default defineUserConfig({
   base: '/',
 
   title: 'AI小栈',
-  description: 'AI小栈 - 技术博客',
+  description: 'AI Agent 工程师转型实战指南',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
 
-    navbar: ['/', '/get-started'],
+    navbar: [
+      { text: '首页', link: '/' },
+      {
+        text: 'LLM 核心',
+        children: [
+          { text: 'Transformer 与注意力机制', link: '/llm-foundation/transformer' },
+          { text: '主流大模型对比', link: '/llm-foundation/model-comparison' },
+          { text: 'Prompt Engineering', link: '/llm-foundation/prompt-engineering' },
+          { text: 'Token 与成本核算', link: '/llm-foundation/token-and-context' },
+          { text: 'Function Calling', link: '/llm-foundation/function-calling' },
+        ],
+      },
+      {
+        text: 'Agent 架构',
+        children: [
+          { text: 'Agent 范式', link: '/agent-architecture/react-pattern' },
+          { text: '多 Agent 协作', link: '/agent-architecture/multi-agent' },
+          { text: '记忆系统', link: '/agent-architecture/memory-system' },
+          { text: '规划与推理', link: '/agent-architecture/planning-reasoning' },
+          { text: '安全与可控性', link: '/agent-architecture/safety-control' },
+        ],
+      },
+      {
+        text: '开发框架',
+        children: [
+          { text: 'LangChain / LangGraph', link: '/agent-frameworks/langchain-langgraph' },
+          { text: 'Claude Agent SDK', link: '/agent-frameworks/claude-agent-sdk' },
+          { text: 'OpenAI Agents SDK', link: '/agent-frameworks/openai-agents-sdk' },
+          { text: 'AutoGen / CrewAI', link: '/agent-frameworks/autogen-crewai' },
+          { text: 'Dify / Coze', link: '/agent-frameworks/dify-coze' },
+          { text: 'MCP 协议', link: '/agent-frameworks/mcp-protocol' },
+        ],
+      },
+      {
+        text: '工程实践',
+        children: [
+          { text: 'RAG 工程化', link: '/agent-engineering/rag-engineering' },
+          { text: '工具设计与封装', link: '/agent-engineering/tool-design' },
+          { text: '流式输出与 UX', link: '/agent-engineering/streaming-ux' },
+          { text: '可观测性', link: '/agent-engineering/observability' },
+          { text: '部署与成本优化', link: '/agent-engineering/deployment-optimization' },
+          { text: '测试与评估', link: '/agent-engineering/testing-evaluation' },
+        ],
+      },
+      {
+        text: '实战项目',
+        children: [
+          { text: '智能编程助手', link: '/agent-projects/coding-assistant' },
+          { text: '知识库问答 Agent', link: '/agent-projects/knowledge-qa-agent' },
+          { text: '数据分析 Agent', link: '/agent-projects/data-analysis-agent' },
+          { text: '多模态 Agent', link: '/agent-projects/multimodal-agent' },
+          { text: '运维 Agent', link: '/agent-projects/ops-agent' },
+          { text: '从0到1构建', link: '/agent-projects/build-from-zero' },
+        ],
+      },
+      {
+        text: '行业前沿',
+        children: [
+          { text: '论文解读', link: '/industry-frontier/paper-review' },
+          { text: '开源项目追踪', link: '/industry-frontier/open-source-tracking' },
+          { text: 'MCP 生态', link: '/industry-frontier/mcp-ecosystem' },
+          { text: 'Agent 商业化', link: '/industry-frontier/commercialization' },
+          { text: '职业路径', link: '/industry-frontier/career-path' },
+        ],
+      },
+    ],
+
+    sidebar: {
+      '/llm-foundation/': [
+        {
+          text: 'LLM 核心能力',
+          children: [
+            '/llm-foundation/README',
+            '/llm-foundation/transformer',
+            '/llm-foundation/model-comparison',
+            '/llm-foundation/prompt-engineering',
+            '/llm-foundation/token-and-context',
+            '/llm-foundation/function-calling',
+          ],
+        },
+      ],
+      '/agent-architecture/': [
+        {
+          text: 'Agent 架构与设计',
+          children: [
+            '/agent-architecture/README',
+            '/agent-architecture/react-pattern',
+            '/agent-architecture/multi-agent',
+            '/agent-architecture/memory-system',
+            '/agent-architecture/planning-reasoning',
+            '/agent-architecture/safety-control',
+          ],
+        },
+      ],
+      '/agent-frameworks/': [
+        {
+          text: 'Agent 开发框架',
+          children: [
+            '/agent-frameworks/README',
+            '/agent-frameworks/langchain-langgraph',
+            '/agent-frameworks/claude-agent-sdk',
+            '/agent-frameworks/openai-agents-sdk',
+            '/agent-frameworks/autogen-crewai',
+            '/agent-frameworks/dify-coze',
+            '/agent-frameworks/mcp-protocol',
+          ],
+        },
+      ],
+      '/agent-engineering/': [
+        {
+          text: 'Agent 工程实践',
+          children: [
+            '/agent-engineering/README',
+            '/agent-engineering/rag-engineering',
+            '/agent-engineering/tool-design',
+            '/agent-engineering/streaming-ux',
+            '/agent-engineering/observability',
+            '/agent-engineering/deployment-optimization',
+            '/agent-engineering/testing-evaluation',
+          ],
+        },
+      ],
+      '/agent-projects/': [
+        {
+          text: 'Agent 实战项目',
+          children: [
+            '/agent-projects/README',
+            '/agent-projects/coding-assistant',
+            '/agent-projects/knowledge-qa-agent',
+            '/agent-projects/data-analysis-agent',
+            '/agent-projects/multimodal-agent',
+            '/agent-projects/ops-agent',
+            '/agent-projects/build-from-zero',
+          ],
+        },
+      ],
+      '/industry-frontier/': [
+        {
+          text: '行业前沿',
+          children: [
+            '/industry-frontier/README',
+            '/industry-frontier/paper-review',
+            '/industry-frontier/open-source-tracking',
+            '/industry-frontier/mcp-ecosystem',
+            '/industry-frontier/commercialization',
+            '/industry-frontier/career-path',
+          ],
+        },
+      ],
+    },
   }),
 
   bundler: viteBundler(),
