@@ -198,7 +198,6 @@ export default defineUserConfig({
           text: '面试经验分享',
           children: [
             { text: '模块概览', link: '/interview-experience/' },
-            '/interview-experience/question-types',
             '/interview-experience/technical-interview',
             '/interview-experience/agent-questions',
             '/interview-experience/project-presentation',
