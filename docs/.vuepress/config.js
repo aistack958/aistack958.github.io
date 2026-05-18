@@ -17,7 +17,9 @@ export default defineUserConfig({
       { text: '首页', link: '/' },
       {
         text: 'LLM 核心',
+        link: '/llm-foundation/',
         children: [
+          { text: '模块概览', link: '/llm-foundation/' },
           { text: 'Transformer 与注意力机制', link: '/llm-foundation/transformer' },
           { text: '主流大模型对比', link: '/llm-foundation/model-comparison' },
           { text: 'Prompt Engineering', link: '/llm-foundation/prompt-engineering' },
@@ -27,7 +29,9 @@ export default defineUserConfig({
       },
       {
         text: 'Agent 架构',
+        link: '/agent-architecture/',
         children: [
+          { text: '模块概览', link: '/agent-architecture/' },
           { text: 'Agent 范式', link: '/agent-architecture/react-pattern' },
           { text: '多 Agent 协作', link: '/agent-architecture/multi-agent' },
           { text: '记忆系统', link: '/agent-architecture/memory-system' },
@@ -37,7 +41,9 @@ export default defineUserConfig({
       },
       {
         text: '开发框架',
+        link: '/agent-frameworks/',
         children: [
+          { text: '模块概览', link: '/agent-frameworks/' },
           { text: 'LangChain / LangGraph', link: '/agent-frameworks/langchain-langgraph' },
           { text: 'Claude Agent SDK', link: '/agent-frameworks/claude-agent-sdk' },
           { text: 'OpenAI Agents SDK', link: '/agent-frameworks/openai-agents-sdk' },
@@ -48,7 +54,9 @@ export default defineUserConfig({
       },
       {
         text: '工程实践',
+        link: '/agent-engineering/',
         children: [
+          { text: '模块概览', link: '/agent-engineering/' },
           { text: 'RAG 工程化', link: '/agent-engineering/rag-engineering' },
           { text: '工具设计与封装', link: '/agent-engineering/tool-design' },
           { text: '流式输出与 UX', link: '/agent-engineering/streaming-ux' },
@@ -59,7 +67,9 @@ export default defineUserConfig({
       },
       {
         text: '实战项目',
+        link: '/agent-projects/',
         children: [
+          { text: '模块概览', link: '/agent-projects/' },
           { text: '智能编程助手', link: '/agent-projects/coding-assistant' },
           { text: '知识库问答 Agent', link: '/agent-projects/knowledge-qa-agent' },
           { text: '数据分析 Agent', link: '/agent-projects/data-analysis-agent' },
@@ -70,7 +80,9 @@ export default defineUserConfig({
       },
       {
         text: '行业前沿',
+        link: '/industry-frontier/',
         children: [
+          { text: '模块概览', link: '/industry-frontier/' },
           { text: '论文解读', link: '/industry-frontier/paper-review' },
           { text: '开源项目追踪', link: '/industry-frontier/open-source-tracking' },
           { text: 'MCP 生态', link: '/industry-frontier/mcp-ecosystem' },
@@ -85,7 +97,7 @@ export default defineUserConfig({
         {
           text: 'LLM 核心能力',
           children: [
-            '/llm-foundation/README',
+            '/llm-foundation/',
             '/llm-foundation/transformer',
             '/llm-foundation/model-comparison',
             '/llm-foundation/prompt-engineering',
@@ -98,7 +110,7 @@ export default defineUserConfig({
         {
           text: 'Agent 架构与设计',
           children: [
-            '/agent-architecture/README',
+            '/agent-architecture/',
             '/agent-architecture/react-pattern',
             '/agent-architecture/multi-agent',
             '/agent-architecture/memory-system',
@@ -111,7 +123,7 @@ export default defineUserConfig({
         {
           text: 'Agent 开发框架',
           children: [
-            '/agent-frameworks/README',
+            '/agent-frameworks/',
             '/agent-frameworks/langchain-langgraph',
             '/agent-frameworks/claude-agent-sdk',
             '/agent-frameworks/openai-agents-sdk',
@@ -125,7 +137,7 @@ export default defineUserConfig({
         {
           text: 'Agent 工程实践',
           children: [
-            '/agent-engineering/README',
+            '/agent-engineering/',
             '/agent-engineering/rag-engineering',
             '/agent-engineering/tool-design',
             '/agent-engineering/streaming-ux',
@@ -139,7 +151,7 @@ export default defineUserConfig({
         {
           text: 'Agent 实战项目',
           children: [
-            '/agent-projects/README',
+            '/agent-projects/',
             '/agent-projects/coding-assistant',
             '/agent-projects/knowledge-qa-agent',
             '/agent-projects/data-analysis-agent',
@@ -153,7 +165,7 @@ export default defineUserConfig({
         {
           text: '行业前沿',
           children: [
-            '/industry-frontier/README',
+            '/industry-frontier/',
             '/industry-frontier/paper-review',
             '/industry-frontier/open-source-tracking',
             '/industry-frontier/mcp-ecosystem',
