@@ -5,7 +5,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 export default defineUserConfig({
   lang: 'zh-CN',
 
-  base: '/aistacks/',
+  base: '/',
 
   title: 'AI小栈',
   description: 'AI小栈 - 技术博客',
