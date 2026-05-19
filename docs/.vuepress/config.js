@@ -6,6 +6,7 @@ import { copyCodePlugin } from '@vuepress/plugin-copy-code'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { sitemapPlugin } from '@vuepress/plugin-sitemap'
+import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -223,6 +224,10 @@ export default defineUserConfig({
     backToTopPlugin(),
     sitemapPlugin({
       hostname: 'https://aistack958.github.io',
+    }),
+    // 百度统计插件
+    baiduAnalyticsPlugin({
+      id: 'abaffaf4c68d721290c76e241e483a72',
     }),
   ],
 })
